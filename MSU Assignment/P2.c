@@ -3,6 +3,7 @@
 void main()
 {
     int a[20],n,i,j,temp;
+
     printf("How many numbers you want to enter:");
     scanf("%d",&n);
     printf("Enter the element:");
@@ -47,7 +48,6 @@ void main()
             } 
         } 
     }
-
     printf("\nIn Descending Order:-\n");
     for(i=0;i<n;i++)
     {

@@ -22,8 +22,10 @@ int returnValue2(int a){
 void main()
 {
     int n,temp;
+
     printf("Enter n:");
     scanf("%d",&n);
+    
     NoPara();
     temp=returnValue();
     printf("%d return\n",temp);
