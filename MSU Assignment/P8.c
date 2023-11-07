@@ -2,35 +2,46 @@
 #include<stdio.h>
 #include<conio.h>
 
-void SwapByValue(int a,int b){
-    int temp;
-    temp=a;
-    a=b;
-    b=temp;
+//Function to swap two variables using parameter passing by value
+void SwapByValue(int a, int b){
+    int temp = a;
+    a = b;
+    b = temp;
+}
+
+//Function to swap two variables using parameter passing by pointer
+void SwapByPointer(int *a, int *b){
+    int temp = *a;
+    *a = *b;
+    *b = temp;
 }
 
 /*
-void SwapByPointer(int* a,int* b){
-    int* temp=*a;
-    *a=*b;
-    *b=temp;
+//Note:Run this function in CPP
+//Function to swap two variables using parameter passing by reference
+void SwapByRefer(int &a, int &b){
+    int temp = a;
+    a = b;
+    b = temp;
 }*/
 
-/*void SwapByRefer(int &a,int &b){
-    int temp=&a;
-    &a=&b;
-    &b=temp;
-}*/
-
-void main()
+int main()
 {
-    int n1=10,n2=5;
+    int n1 = 22, n2 = 5;
     
-    printf("Original Value n1=%d n2=%d\n",n1,n2);
-    SwapByValue(n1,n2);
-    printf("After Swapping By Value n1=%d n2=%d\n",n1,n2);
-    /*SwapByPointer(*n1,*n2);
-    printf("After Swapping By Pointer n1=%d n2=%d\n",n1,n2);
-    SwapByRefer(n1,n2);
-    printf("After Swapping By Reference n1=%d n2=%d\n",n1,n2);*/
+    printf("Original Value number 1 = %d number 2 = %d\n",n1,n2);
+
+    //Swap by value (Original values will not change)
+    SwapByValue(n1, n2);
+    printf("After Swapping By Value number 1 = %d number 2 = %d\n",n1,n2);
+
+    //Swap by pointer (Original values will change)
+    SwapByPointer(&n1, &n2);
+    printf("After Swapping By Pointer number 1 = %d number 2 = %d\n",n1,n2);
+
+    /*//Swap by reference (Original values will change)
+    SwapByRefer(n1, n2);
+    printf("After Swapping By Reference number 1 = %d number 2 = %d\n",n1,n2);*/
+
+    return 0;
 }
